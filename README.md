@@ -20,6 +20,11 @@ This project allows users to easily place customized dress orders by selecting s
 
 - *HTML5* – For structure and form layout  
 - *CSS3* – For styling, animations, and responsiveness  
-- *JavaScript (ES6)* – For dynamic behavior and validation  
+- *JavaScript (ES6)* – For dynamic behavior and validation
+## 🚀 How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/custom-dress-order-form.git 
 
 
