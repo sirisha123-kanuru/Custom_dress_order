@@ -1,0 +1,112 @@
+/* ====== General Reset and Body ====== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ====== Utility Classes ====== */
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ====== Login Container ====== */
+.containers {
+  max-width: 450px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+#loginPage h2 {
+  text-align: center;
+  color: #6a1b9a;
+}
+
+/* ====== Form Elements Shared ====== */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* ====== Button Styles ====== */
+button {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a148c;
+}
+
+/* ====== Dress Order  Container ====== */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.container h1,
+.container h2,
+.container h3 {
+  color: #6a1b9a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ====== Image Preview Styling ====== */
+#previewImage {
+  width: 100%;
+  max-width: 220px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ====== Form Section Separators ====== */
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  color: #4a148c;
+}
+.form-section {
+  display: block;
+  margin-bottom: 15px; /* Adds spacing between sections */
+}
+
+.form-section label {
+  display: block; /* Ensures labels stack vertically */
+  margin-top: 5px;
+}

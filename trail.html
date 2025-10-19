@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Dress Order</title>
+  <link rel="stylesheet" href="trail.css">
+  <link rel="icon" href="images/title.jpg">
+</head>
+<body>
+  <div class="containers">
+    <!-- Login Form -->
+    <div id="loginPage">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Username:</label>
+        <input type="text" id="username" required>
+
+        <label>Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginError" class="error"></p>
+    </div>
+
+    <!-- Dress Page (Initially Hidden) -->
+    <div id="dressPage" class="hidden">
+      <div class="container">
+        <h1>Custom Dress Order </h1>
+
+        <form id="dressForm">
+          <!-- All form fields -->
+          <label>Dress Type:</label>
+          <select id="dressType" required>
+            <option value="">Select</option>
+            <option value="Saree">Saree</option>
+            <option value="Gown">Gown</option>
+            <option value="Lehenga">Lehenga</option>
+          </select>
+
+          <label>Fabric:</label>
+          <select id="fabric" required>
+            <option value="">Select</option>
+            <option value="Silk">Silk</option>
+            <option value="Cotton">Cotton</option>
+            <option value="Georgette">Georgette</option>
+          </select>
+
+          <label>Color:</label>
+          <input type="color" id="color" required>
+
+          <h3>Design Details</h3>
+
+          <label>Neck Design:</label>
+          <select id="neckDesign" required>
+            <option value="">Select</option>
+            <option value="Round Neck">Round Neck</option>
+            <option value="V-Neck">V-Neck</option>
+            <option value="Sweetheart">Sweetheart</option>
+            <option value="High Neck">High Neck</option>
+          </select>
+
+          <label>Back Neck Style:</label>
+          <select id="backNeck" required>
+            <option value="">Select</option>
+            <option value="Deep U">Deep U</option>
+            <option value="Square">Square</option>
+            <option value="Keyhole">Keyhole</option>
+          </select>
+
+          <label>Sleeve Style:</label>
+          <select id="sleeveDesign" required>
+            <option value="">Select</option>
+            <option value="Sleeveless">Sleeveless</option>
+            <option value="Half Sleeve">Half Sleeve</option>
+            <option value="Full Sleeve">Full Sleeve</option>
+            <option value="Bell Sleeve">Bell Sleeve</option>
+          </select>
+
+          <label>Dress Length:</label>
+          <select id="dressLength" required>
+            <option value="">Select</option>
+            <option value="Knee Length">Knee Length</option>
+            <option value="Full Length">Full Length</option>
+            <option value="Floor Length">Floor Length</option>
+          </select>
+
+          <label>Bottom Style:</label>
+          <input type="text" id="bottomStyle" placeholder="e.g., A-line, Flare">
+          <div class="form-section">
+            <label><input type="checkbox" name="embroidery"> Include Embroidery</label>
+
+          </div>
+          <div class="form-section">
+               <label>Lining Required:</label><br>
+                <label><input type="radio" name="lining" value="yes"> Yes</label>
+                <label><input type="radio" name="lining" value="no"> No</label>
+          </div>
+
+          <label>Additional Notes:</label>
+          <textarea id="customNotes" rows="3" placeholder="Any extra instructions..."></textarea>
+
+          <h3>Measurements</h3>
+          <label>Bust (in inches):</label>
+          <input type="number" id="bust" min="28" max="50" required>
+
+          <label>Waist (in inches):</label>
+          <input type="number" id="waist" min="24" max="48" required>
+
+          <label>Hip (in inches):</label>
+          <input type="number" id="hip" min="30" max="60" required>
+
+          <label>Upload Reference Image:</label>
+          <input type="file" id="referenceImage" accept="image/*">
+
+          <button type="submit">Preview Order</button>
+        </form>
+
+        <!-- Preview Section -->
+        <div id="orderPreview" class="hidden">
+          <h2>🧾 Order Preview</h2>
+          <p><strong>Dress Type:</strong> <span id="previewDressType"></span></p>
+          <p><strong>Fabric:</strong> <span id="previewFabric"></span></p>
+          <p><strong>Color:</strong> <span id="previewColor"></span></p>
+
+          <p><strong>Neck Design:</strong> <span id="previewNeckDesign"></span></p>
+          <p><strong>Back Neck Style:</strong> <span id="previewBackNeck"></span></p>
+          <p><strong>Sleeve Design:</strong> <span id="previewSleeveDesign"></span></p>
+          <p><strong>Dress Length:</strong> <span id="previewLength"></span></p>
+          <p><strong>Bottom Style:</strong> <span id="previewBottomStyle"></span></p>
+          <p><strong>Embroidery:</strong> <span id="previewEmbroidery"></span></p>
+          <p><strong>Lining Required:</strong> <span id="previewLining"></span></p>
+          <p><strong>Custom Notes:</strong> <span id="previewNotes"></span></p>
+
+          <p><strong>Bust:</strong> <span id="previewBust"></span></p>
+          <p><strong>Waist:</strong> <span id="previewWaist"></span></p>
+          <p><strong>Hip:</strong> <span id="previewHip"></span></p>
+
+          <p><strong>Reference Image:</strong><br><img id="previewImage" src="" alt="No image uploaded"></p>
+
+          <button onclick="submitOrder()">Submit Order</button>
+        </div>
+
+        <div id="successMessage" class="hidden">
+          <h2>✅ Order Submitted Successfully!</h2>
+          <p>Thank you for your order. We'll contact you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="trail.js"></script>
+</body>
+</html>
